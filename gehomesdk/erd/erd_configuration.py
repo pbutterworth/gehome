@@ -316,6 +316,18 @@ _configuration = [
     ErdConfigurationEntry(ErdCode.HOOD_DELAY_OFF, ErdOnOffConverter(), ErdCodeClass.HOOD_SENSOR),
     ErdConfigurationEntry(ErdCode.HOOD_TIMER, ErdTimeSpanConverter(uom="seconds"), ErdCodeClass.TIMER, ErdDataType.TIMESPAN),
     ErdConfigurationEntry(ErdCode.HOOD_TIMER_AVAILABILITY, ErdOnOffConverter(), ErdCodeClass.HOOD_SENSOR),
+    # ErdConfigurationEntry(ErdCode.HOOD_DELAY_OFF_DURATION_LIMITS, ErdIntConverter(length=2), ErdCodeClass.HOOD_SENSOR, ErdDataType.TIMESPAN),
+    ErdConfigurationEntry(ErdCode.HOOD_ACTUAL_FAN_SPEED, ErdHoodFanSpeedConverter(), ErdCodeClass.FAN),
+    ErdConfigurationEntry(ErdCode.HOOD_AVAILABLE_FAN_SPEEDS, ErdHoodFanSpeedAvailabilityConverter(), ErdCodeClass.HOOD_SENSOR),
+    ErdConfigurationEntry(ErdCode.HOOD_AVAILABLE_BOOST_SPEEDS, ErdHoodFanSpeedAvailabilityConverter(), ErdCodeClass.HOOD_SENSOR),
+    ErdConfigurationEntry(ErdCode.HOOD_ACTUAL_LIGHT_LEVEL, ErdHoodLightLevelConverter(), ErdCodeClass.LIGHT),
+    ErdConfigurationEntry(ErdCode.HOOD_AVAILABLE_LIGHT_LEVELS, ErdHoodLightLevelAvailabilityConverter(), ErdCodeClass.HOOD_SENSOR),
+    ErdConfigurationEntry(ErdCode.HOOD_ACTUAL_DELAY_OFF_MODE, ErdOnOffConverter(), ErdCodeClass.HOOD_SENSOR),
+    # ErdConfigurationEntry(ErdCode.HOOD_TO_COOKTOP_CONNECTION_STATUS, ErdIntConverter(length=1), ErdCodeClass.HOOD_SENSOR, ErdDataType.INT),
+    # ErdConfigurationEntry(ErdCode.HOOD_STATUS, ErdIntConverter(length=1), ErdCodeClass.HOOD_SENSOR, ErdDataType.INT),
+    # ErdConfigurationEntry(ErdCode.HOOD_MODEL, ErdIntConverter(length=2), ErdCodeClass.HOOD_SENSOR, ErdDataType.INT),
+    # ErdConfigurationEntry(ErdCode.HOOD_ACTUAL_LIGHT_COLOR, ErdIntConverter(length=1), ErdCodeClass.HOOD_SENSOR, ErdDataType.INT),
+    # ErdConfigurationEntry(ErdCode.HOOD_AVAILABLE_LIGHT_COLORS, ErdIntConverter(length=2), ErdCodeClass.HOOD_SENSOR, ErdDataType.INT),
 
     #Opal Ice Maker
     ErdConfigurationEntry(ErdCode.OIM_STATUS, ErdOimStatusConverter(), ErdCodeClass.OIM_SENSOR),
